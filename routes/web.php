@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/example', [\App\Http\Controllers\ExampleController::class, 'index']);
+
+Route::resource('tasks', \App\Http\Controllers\TaskController::class,);
