@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/example', [\App\Http\Controllers\ExampleController::class, 'index']);
 
 Route::resource('tasks', \App\Http\Controllers\TaskController::class,);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
